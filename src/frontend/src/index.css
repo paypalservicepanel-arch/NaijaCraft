@@ -1,0 +1,109 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Fraunces:wght@700;800;900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --radius: 0.75rem;
+
+    /* NaijaCraft Green Palette */
+    --background: 0.98 0.01 162;
+    --foreground: 0.15 0 0;
+    --card: 1 0 0;
+    --card-foreground: 0.15 0 0;
+    --popover: 1 0 0;
+    --popover-foreground: 0.15 0 0;
+
+    /* Primary: #0F6B45 deep emerald */
+    --primary: 0.46 0.13 162;
+    --primary-foreground: 1 0 0;
+
+    /* Primary dark: #0B5A3B */
+    --primary-dark: 0.4 0.11 162;
+
+    /* Secondary: light mint #EAF6EF */
+    --secondary: 0.96 0.03 162;
+    --secondary-foreground: 0.46 0.13 162;
+
+    --muted: 0.96 0.02 162;
+    --muted-foreground: 0.45 0 0;
+
+    /* Accent: #F2B233 gold */
+    --accent: 0.78 0.16 75;
+    --accent-foreground: 0.15 0 0;
+
+    --destructive: 0.577 0.245 27.325;
+    --destructive-foreground: 1 0 0;
+
+    --border: 0.92 0.01 162;
+    --input: 0.92 0.01 162;
+    --ring: 0.46 0.13 162;
+
+    /* Footer: #0B2F22 */
+    --footer: 0.22 0.07 162;
+
+    /* Hero warm overlay: #F3E2C6 */
+    --warm-overlay: 0.91 0.04 75;
+
+    --chart-1: 0.46 0.13 162;
+    --chart-2: 0.78 0.16 75;
+    --chart-3: 0.6 0.118 184;
+    --chart-4: 0.828 0.189 84;
+    --chart-5: 0.577 0.245 27;
+
+    --sidebar: 0.22 0.07 162;
+    --sidebar-foreground: 0.95 0.02 162;
+    --sidebar-primary: 0.78 0.16 75;
+    --sidebar-primary-foreground: 0.15 0 0;
+    --sidebar-accent: 0.3 0.08 162;
+    --sidebar-accent-foreground: 0.95 0.02 162;
+    --sidebar-border: 0.3 0.08 162;
+    --sidebar-ring: 0.46 0.13 162;
+  }
+
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-body;
+    -webkit-font-smoothing: antialiased;
+  }
+  h1,
+  h2,
+  h3 {
+    @apply font-display;
+  }
+}
+
+@layer utilities {
+  .text-primary-dark {
+    color: oklch(var(--primary-dark));
+  }
+  .bg-primary-dark {
+    background-color: oklch(var(--primary-dark));
+  }
+  .bg-footer {
+    background-color: oklch(var(--footer));
+  }
+  .bg-warm {
+    background-color: oklch(var(--warm-overlay));
+  }
+  .text-accent {
+    color: oklch(var(--accent));
+  }
+  .bg-accent {
+    background-color: oklch(var(--accent));
+  }
+  .border-accent {
+    border-color: oklch(var(--accent));
+  }
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}
